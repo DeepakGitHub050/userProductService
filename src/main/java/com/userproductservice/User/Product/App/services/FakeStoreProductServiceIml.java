@@ -4,11 +4,8 @@ import com.userproductservice.User.Product.App.dtos.ProductDto;
 import com.userproductservice.User.Product.App.models.Category;
 import com.userproductservice.User.Product.App.models.Product;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;

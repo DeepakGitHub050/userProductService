@@ -2,7 +2,6 @@ package com.userproductservice.User.Product.App.controllers;
 
 import com.userproductservice.User.Product.App.models.Product;
 import com.userproductservice.User.Product.App.services.CategoryService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
