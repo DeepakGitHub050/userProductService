@@ -15,7 +15,7 @@ import java.util.List;
 @RequestMapping("/products")
 public class ProductController {
 
-    private ProductService productService;
+    private final ProductService productService;
 
     public ProductController(ProductService productService) {
         this.productService = productService;
@@ -31,19 +31,12 @@ public class ProductController {
     public ResponseEntity<Product> getSingleResponseDto(@PathVariable Long pId) {
         MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
         headers.add("Accept", "dks/application/json");
-        /*GetSingleResponseDto responseDto = new GetSingleResponseDto();
-        responseDto.setProduct(productService.getSingleProduct(pId));
-        return responseDto;*/
-        //return productService.getSingleProduct(pId);
-        ResponseEntity<Product> response = new ResponseEntity<>(productService.getSingleProduct(pId),headers, HttpStatus.OK);
-
-        return response;
+        return new ResponseEntity<>(productService.getSingleProduct(pId),headers, HttpStatus.OK);
     }
 
     @PostMapping
     public ResponseEntity<Product> createProduct(@RequestBody ProductDto productDto) {
-        ResponseEntity<Product> response = new ResponseEntity<>(productService.addNewProduct(productDto),HttpStatus.CREATED);
-        return response;
+        return new ResponseEntity<>(productService.addNewProduct(productDto),HttpStatus.CREATED);
     }
 
     @PutMapping("/{pID}")
@@ -55,7 +48,10 @@ public class ProductController {
     }
 
     @DeleteMapping("/{pId}")
-    public String deleteProduct(@PathVariable int pId) {
-        return "Deleting product: " + pId;
+    public ResponseEntity<Product> deleteProduct(@PathVariable Long pId) {
+        if(productService.deleteProduct(pId)!=null)
+            return new ResponseEntity<>(productService.deleteProduct(pId),HttpStatus.OK);
+        else
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }

@@ -9,7 +9,7 @@ import java.util.Date;
 @Setter
 public class BaseModel {
     private Long id;
-    private Date createdAt;
+    /*private Date createdAt;
     private Date updatedAat;
-    private boolean isDeleted = false;
+    private boolean isDeleted = false;*/
 }
