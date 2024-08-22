@@ -28,4 +28,12 @@ public class CategoryService {
         }
         return null;
     }
+    public String deleteCategory(String categoryName) {
+        Category category = categoryRepository.findCategoryByName(categoryName);
+        if (category != null) {
+            categoryRepository.delete(category);
+            return categoryName;
+        }
+        return null;
+    }
 }

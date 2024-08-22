@@ -34,4 +34,13 @@ public class CategoryController {
         return new ResponseEntity<>(res, HttpStatus.OK);
     }
 
+    @DeleteMapping("/{category}")
+    public ResponseEntity<String> deleteCategory(@PathVariable("category") String category) {
+        String categoryName = categoryService.deleteCategory(category);
+        if (categoryName!=null){
+            return new ResponseEntity<>(category, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
 }
