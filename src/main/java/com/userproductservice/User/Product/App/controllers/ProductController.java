@@ -31,7 +31,10 @@ public class ProductController {
     public ResponseEntity<Product> getSingleResponseDto(@PathVariable Long pId) {
         MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
         headers.add("Accept", "dks/application/json");
-        return new ResponseEntity<>(productService.getSingleProduct(pId),headers, HttpStatus.OK);
+        if(productService.getSingleProduct(pId)!=null)
+            return new ResponseEntity<>(productService.getSingleProduct(pId),headers, HttpStatus.OK);
+        else
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @PostMapping
