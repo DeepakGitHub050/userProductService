@@ -1,4 +1,4 @@
-package com.userproductservice.User.Product.App.dtos;
+package com.productservice.Product.App.dtos;
 
 import lombok.Getter;
 import lombok.Setter;

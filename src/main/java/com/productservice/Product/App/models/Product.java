@@ -1,6 +1,5 @@
-package com.userproductservice.User.Product.App.models;
+package com.productservice.Product.App.models;
 
-import com.userproductservice.User.Product.App.dtos.RatingDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

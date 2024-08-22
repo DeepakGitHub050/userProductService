@@ -1,8 +1,8 @@
-package com.userproductservice.User.Product.App.controllers;
+package com.productservice.Product.App.controllers;
 
-import com.userproductservice.User.Product.App.dtos.ProductDto;
-import com.userproductservice.User.Product.App.models.Product;
-import com.userproductservice.User.Product.App.services.ProductService;
+import com.productservice.Product.App.models.Product;
+import com.productservice.Product.App.services.ProductService;
+import com.productservice.Product.App.dtos.ProductDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;

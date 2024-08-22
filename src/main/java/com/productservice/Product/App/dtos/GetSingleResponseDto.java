@@ -1,6 +1,6 @@
-package com.userproductservice.User.Product.App.dtos;
+package com.productservice.Product.App.dtos;
 
-import com.userproductservice.User.Product.App.models.Product;
+import com.productservice.Product.App.models.Product;
 import lombok.Getter;
 import lombok.Setter;
 

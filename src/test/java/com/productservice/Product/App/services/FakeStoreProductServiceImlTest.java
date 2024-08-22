@@ -1,4 +1,4 @@
-package com.userproductservice.User.Product.App.services;
+package com.productservice.Product.App.services;
 
 import static org.junit.jupiter.api.Assertions.*;
 

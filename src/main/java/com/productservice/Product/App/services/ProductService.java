@@ -1,10 +1,10 @@
-package com.userproductservice.User.Product.App.services;
+package com.productservice.Product.App.services;
 
-import com.userproductservice.User.Product.App.Repositories.CategoryRepository;
-import com.userproductservice.User.Product.App.Repositories.ProductRepository;
-import com.userproductservice.User.Product.App.dtos.ProductDto;
-import com.userproductservice.User.Product.App.models.Category;
-import com.userproductservice.User.Product.App.models.Product;
+import com.productservice.Product.App.Repositories.CategoryRepository;
+import com.productservice.Product.App.Repositories.ProductRepository;
+import com.productservice.Product.App.dtos.ProductDto;
+import com.productservice.Product.App.models.Category;
+import com.productservice.Product.App.models.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

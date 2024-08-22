@@ -1,7 +1,7 @@
-package com.userproductservice.User.Product.App.controllers;
+package com.productservice.Product.App.controllers;
 
-import com.userproductservice.User.Product.App.models.Product;
-import com.userproductservice.User.Product.App.services.CategoryService;
+import com.productservice.Product.App.services.CategoryService;
+import com.productservice.Product.App.models.Product;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
