@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/products/categories")
@@ -25,8 +26,8 @@ public class CategoryController {
     }
 
     @GetMapping("/{category}")
-    public ResponseEntity<List<Product>> getProductsInCategory(@PathVariable("category") String category) {
-        List<Product> res = categoryService.getProductByCategory(category);
+    public ResponseEntity<Set<Product>> getProductsInCategory(@PathVariable("category") String category) {
+        Set<Product> res = categoryService.getProductByCategory(category);
         if (res.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
